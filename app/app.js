@@ -35,7 +35,8 @@ function initListeners() {
   });
 
 
-  $("#edit").click(function () {
+  $("#edit").click(function (e) {
+    e.preventDefault();
     let userObj = {
         fname: "User",
         lname: "Object",
@@ -43,6 +44,12 @@ function initListeners() {
         password: "********"
     };
     console.log(userObj);
+    $("#fname").val (userObj.fname);
+    $("#lname").val (userObj.lname);
+    $("#email").val (userObj.email);
+    $("#password").val (userObj.password);   
+    console.log("input" + fname + lname + email + password);
+
   })
 }
 

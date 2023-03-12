@@ -1,3 +1,52 @@
 .editinfo {
-    padding: 100px;
+  .row {
+    width: 100vw;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .info {
+      padding: 100px;
+      text-align: left;
+      height: 500px;
+      width: 500px;
+      h2 {
+        font-size: 24pt;
+        font-style: oblique;
+        font-weight: bolder;
+        letter-spacing: 1pt;
+      }
+      .boxes {
+        width: 250px;
+        label {
+          letter-spacing: 1pt;
+          font-size: 16pt;
+          font-weight: bolder;
+        }
+        input {
+          width: 250px;
+          border-radius: 10px;
+          border-style: solid;
+          border-color: #395c6b;
+          height: 20px;
+          padding: 5px;
+          font-size: 12pt;
+          display: block;
+        }
+
+        #edit {
+          height: 40px;
+          width: 100px;
+          border-radius: 15px;
+          border:none;
+          font-size: 16pt;
+          font-weight: bolder;
+          letter-spacing: 1pt;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
