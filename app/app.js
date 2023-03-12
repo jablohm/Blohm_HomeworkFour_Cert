@@ -1,53 +1,52 @@
 function changeRoute() {
-    let hashTag = window.location.hash;
-    let pageID = hashTag.replace("#", "");
-    // console.log(hashTag + " " + pageID); 
-    $.get(`pages/${pageID}/${pageID}.html`, function(data){
-        console.log("data" + data);
-        $("#app").html(data);
-    });
+  let hashTag = window.location.hash;
+  let pageID = hashTag.replace("#", "");
+  // console.log(hashTag + " " + pageID);
+  $.get(`pages/${pageID}/${pageID}.html`, function (data) {
+    // console.log("data" + data);
+    $("#app").html(data);
+  });
 }
 
 function initURLlisteners() {
-    $(window).on("hashchange", changeRoute);
-    changeRoute();
+  $(window).on("hashchange", changeRoute);
+  changeRoute();
 }
 
-// $(".btn").click(function(){
-//     alert("An action was performed.");
-//   });
-//   $(".view").click(function(){
-//     alert("An action was performed.");
-//   });
+function initListeners() {
+  $(".bars").click(function (e) {
+    // console.log("clicked");
+    $(".bars").toggleClass("active");
+    $(".links").toggleClass("active");
+    // turns added class on and off
+  });
+  $(".links a").click(function (e) {
+    // console.log("clicked");
+    $(".bars").toggleClass("active");
+    $(".links").toggleClass("active");
+  });
 
-  // On all forms, when you click on the submit button you must show all the data that is in the input fields in the console.
+  $("#submit").click(function (){
+    e.preventDefault();
+    console.log("HERE");
+    let email = $("#email").val ();
+    let password = $("#password").val ();
+    console.log("input" + email + '' + password);
+  });
 
 
-
-
-
-
-  
-function initListeners () {
-    $(".bars").click(function(e) {
-        // console.log("clicked");
-        $(".bars").toggleClass("active");
-        $(".links").toggleClass("active");
-        // turns added class on and off
-    });
-
-    $(".links a").click(function(e) {
-        // console.log("clicked");
-        $(".bars").toggleClass("active");
-        $(".links").toggleClass("active");
-        
-
-    });
-
-    
+  $("#edit").click(function () {
+    let userObj = {
+        fname: "User",
+        lname: "Object",
+        email: "user@object.com",
+        password: "********"
+    };
+    console.log(userObj);
+  })
 }
 
-$(document).ready(function() {
-    initListeners();
-    initURLlisteners();
-     });
+$(document).ready(function () {
+  initListeners();
+  initURLlisteners();
+});
