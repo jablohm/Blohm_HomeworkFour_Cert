@@ -1,10 +1,20 @@
 .home {
   .hero {
+    .heroimg {
+          background-image: url(../img/home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: red;
-
+    width: 100%;
+    height: 100vh;
+    }
     .welcome {
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 45%;
+      left: 40%;
+      // translate: (50%, 50%);
       h1 {
         color: #ecf0f1;
         font-size: 36pt;
@@ -16,9 +26,4 @@
   }
 }
 
-@media screen and (max-width: 960px) {
-  .home {
-    height: 100vh;
-    width: 100vw;
-  }
-}
+@media screen and (max-width: 960px) {}

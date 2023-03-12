@@ -13,12 +13,12 @@ function initURLlisteners() {
     changeRoute();
 }
 
-$(".btn").click(function(){
-    alert("An action was performed.");
-  });
-  $(".view").click(function(){
-    alert("An action was performed.");
-  });
+// $(".btn").click(function(){
+//     alert("An action was performed.");
+//   });
+//   $(".view").click(function(){
+//     alert("An action was performed.");
+//   });
 
   // On all forms, when you click on the submit button you must show all the data that is in the input fields in the console.
 
@@ -28,24 +28,24 @@ $(".btn").click(function(){
 
 
   
-// function initListeners () {
-//     $(".bars").click(function(e) {
-//         // console.log("clicked");
-//         $(".bars").toggleClass("active");
-//         $(".links").toggleClass("active");
-//         // turns added class on and off
-//     });
+function initListeners () {
+    $(".bars").click(function(e) {
+        // console.log("clicked");
+        $(".bars").toggleClass("active");
+        $(".links").toggleClass("active");
+        // turns added class on and off
+    });
 
-//     $(".links a").click(function(e) {
-//         // console.log("clicked");
-//         $(".bars").toggleClass("active");
-//         $(".links").toggleClass("active");
+    $(".links a").click(function(e) {
+        // console.log("clicked");
+        $(".bars").toggleClass("active");
+        $(".links").toggleClass("active");
         
 
-//     });
+    });
 
     
-// }
+}
 
 $(document).ready(function() {
     initListeners();
