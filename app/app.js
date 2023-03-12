@@ -20,7 +20,14 @@ $(".btn").click(function(){
     alert("An action was performed.");
   });
 
+  // On all forms, when you click on the submit button you must show all the data that is in the input fields in the console.
 
+
+
+
+
+
+  
 // function initListeners () {
 //     $(".bars").click(function(e) {
 //         // console.log("clicked");

@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+ font-family: Arial; 
+}
+html, body {
+  height: 100%
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px
+}
+
+.nav {
+  position: fixed;
+  left: 10px;
+
+}
+
+.bars {
+display: none;
+}
+.bars .bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  background-color: #031204;
+  height: 5px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.bars.active .bar:nth-child(1) {
+transform: translateY(9.5px) rotate(45deg);
+}
+.bars.active .bar:nth-child(2) {
+opacity: 0;
+}
+.bars.active .bar:nth-child(3) {
+transform: translateY(-9.5px) rotate(-45deg);
+}
+.links {
+margin-left: -10px;
+display: flex;
+background-color:#395c6b;
+height: 50px; 
+overflow: hidden;
+/* opacity: 0; */
+width: 100vw;
+align-items: center;
+justify-content: space-evenly;
+transition: height 0s ease-out, opacity 0.5s ease-out;
+/* vh=viewport height; vw=viewport width one way to get around issues with 100% (mainly bc parent doesn't have parent on it) */
+}
+.links .icon img {
+width: 33px;
+height: 33px;    
+justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #775144;
+}
+.links p {
+color: #ecf0f1;
+font-weight:bolder;
+font-style: oblique; 
+margin: 50px;
+margin:-100px;
+width: 500px; 
+/* justify-content: center;
+align-items: center;
+display: flex; */
+}
+.links.active {
+/* display: flex; */
+height: 100vh;
+opacity: 1;
+}
+
+a {
+color:#ecf0f1;
+font-style: oblique;
+font-weight: bolder;
+letter-spacing: 1pt;
+text-decoration: none;
+}
+a:hover {
+color:#775144;
+cursor: pointer;
+}
+
+
+@media screen and (max-width: 960px) {
+  .links .icon img {
+    display: none;
+  }
+  .links p {
+    display: none;
+  }
+  .bars {
+    display: block;
+  }
+  .links {
+    height: 0;
+    opacity: 0;
+    flex-direction: column;
+  }
+
+}
+
+
+
+.bottom footer{
+  height: 50px;
+  background-color: #395c6b;
+  color: #ecf0f1;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-style: oblique;
+
+}
